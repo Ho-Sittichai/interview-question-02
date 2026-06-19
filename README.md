@@ -112,4 +112,13 @@ CREATE TABLE IF NOT EXISTS users (
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 ```
-# interview-question-02
+
+---
+
+## 🔍 How to Verify Password Encryption (การตรวจสอบการเข้ารหัสข้อมูล)
+
+คุณสามารถเปิดดูข้อมูลในตารางเพื่อตรวจสอบได้ว่า Password ถูกเข้ารหัสด้วย BCrypt (ขึ้นต้นด้วย `$2a$...`) จริงตามข้อกำหนด โดยรันคำสั่งนี้ที่ Root Folder:
+
+```bash
+sqlite3 shared/app.db "SELECT id, username, password FROM users;"
+```
