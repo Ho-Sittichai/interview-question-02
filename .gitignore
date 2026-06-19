@@ -1,0 +1,26 @@
+# User Specific / Environment
+.env
+.env.*
+.DS_Store
+
+# Node / Frontend Dependencies
+node_modules/
+dist/
+.angular/
+.vite/
+
+# .NET / C# Build Outputs
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Database
+shared/*.db
+shared/*.db-journal
+shared/*.db-shm
+shared/*.db-wal
+
+# Log files
+*.log

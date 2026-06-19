@@ -1,0 +1,32 @@
+<div class="page">
+  <div class="card">
+    <div class="avatar">{{ username.charAt(0).toUpperCase() }}</div>
+
+    <h1>ยินดีต้อนรับ! 👋</h1>
+    <p class="username">{{ username }}</p>
+    <p class="msg">คุณเข้าสู่ระบบสำเร็จแล้ว<br>ผ่าน Go Backend · JWT HS256</p>
+
+    <div class="info-row">
+      <div class="info-item">
+        <span class="info-label">Token</span>
+        <span class="info-value">JWT HS256</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">หมดอายุ</span>
+        <span class="info-value">24 ชั่วโมง</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Auth Backend</span>
+        <span class="info-value">Go :5002</span>
+      </div>
+    </div>
+
+    <button id="logout-btn" class="btn-logout" (click)="logout()">
+      ออกจากระบบ
+    </button>
+
+    <div class="badge">
+      <span class="dot orange"></span> Authenticated via Go Backend
+    </div>
+  </div>
+</div>

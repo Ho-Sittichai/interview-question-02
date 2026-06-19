@@ -1,0 +1,58 @@
+<div class="page">
+  <div class="card">
+    <div class="logo">
+      <div class="logo-icon">✦</div>
+      <h1 class="brand">AuthSplit</h1>
+    </div>
+
+    <div class="header">
+      <h2>เข้าสู่ระบบ</h2>
+      <p class="subtitle">Login via Go Backend · Port 5002</p>
+    </div>
+
+    <form (ngSubmit)="handleLogin()" id="login-form">
+      <div class="field">
+        <label for="login-username">Username</label>
+        <input
+          id="login-username"
+          [(ngModel)]="username"
+          name="username"
+          type="text"
+          placeholder="กรอก username ของคุณ"
+          autocomplete="username"
+        />
+      </div>
+
+      <div class="field">
+        <label for="login-password">Password</label>
+        <input
+          id="login-password"
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+          placeholder="กรอก password ของคุณ"
+          autocomplete="current-password"
+        />
+      </div>
+
+      <div *ngIf="errorMsg" class="alert error" role="alert">{{ errorMsg }}</div>
+
+      <button id="login-btn" type="submit" class="btn-primary" [disabled]="loading">
+        <span *ngIf="loading" class="spinner"></span>
+        <span *ngIf="!loading">เข้าสู่ระบบ</span>
+      </button>
+    </form>
+
+    <div class="divider"><span>หรือ</span></div>
+
+    <button id="goto-register-btn" class="btn-secondary" (click)="goToRegister()">
+      ยังไม่มีบัญชี? สมัครสมาชิก →
+    </button>
+
+    <div class="badge">
+      <span class="dot orange"></span> Go Login Backend
+      <span class="separator">·</span>
+      <span class="dot red"></span> Angular Login App
+    </div>
+  </div>
+</div>
