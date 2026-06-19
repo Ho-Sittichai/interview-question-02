@@ -59,7 +59,7 @@ function goToLogin() {
     <div class="card">
       <div class="logo">
         <div class="logo-icon">✦</div>
-        <h1 class="brand">AuthSplit</h1>
+        <h1 class="brand">IT 02-2</h1>
       </div>
 
       <div class="header">
